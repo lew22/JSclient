@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>TF</title>
+    </head>
+
+    <body>
+
+        <ul>
+
+            <li>
+                <a href="/html/index.html">Home</a>
+            </li>
+            <li>
+                <a href="/html/test.html">Test</a>
+            </li>
+
+        </ul>
+
+        <h1>
+            CanaGOD
+        </h1>
+
+        <hr>
+
+        <form action = "" id ="Myform" class="form" name="formulario" method="get">
+            <label>Nombre</label>
+            <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre"> <br><br>
+
+            <label>Apellido</label>
+            <input type="text" name="apellido" id="apellido" maxlength="30" placeholder="Apellido"> <br><br>
+            
+            <label>Seleccion</label>
+            
+            <select id="opcion">
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+
+            <br><br>
+
+            <input type="submit" id="btn" value="Enviar">
+
+        </form>
+        <!-- /js/main.js -->
+        <script src="/server/server.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+    </body>
+
+</html>
+
