@@ -12,18 +12,16 @@ const opcion = document.querySelector('#opcion')
 
 /*crud*/
 
-body.onload = () =>{
-
+body.onload = async () =>{
     var trarr = []
-    const infos = getInfo()
+    const infos = await getInfo()
     console.log(infos)
-    
     infos.forEach((u) => {
         //console.log(u)
         const tr = createtr(u)
         trarr.push(tr)      
     })
-    tbody.appendChild(...trarr)
+    tbody.append(...trarr)
 }
 
 function createtr(u){
@@ -44,18 +42,17 @@ function createtr(u){
     return tr
 }
 
-btnenviar.onclick = (e) =>{
+btnenviar.onclick = async (e) =>{
+    e.preventDefault()
     const inombre=nombre.value
     const iapellido=apellido.value
     const iopcion =opcion.value
     console.log(inombre,iapellido,iopcion)
 
 
-    const newInfo = createInfo(inombre,iapellido,iopcion)
+    const newInfo = await createInfo(inombre,iapellido,iopcion)
     const tr = createtr(newInfo)
-    tbody.appendChild(tr)
-    e.preventDefault()
-
+    tbody.append(tr)
 }
 
 
