@@ -9,6 +9,8 @@ const nombre = document.querySelector('#nombre')
 const apellido = document.querySelector('#apellido')
 const opcion = document.querySelector('#opcion')
 
+const btneditar = document.querySelector('#btneditar')
+const btneliminar = document.querySelector('#btneliminar')
 
 /*crud*/
 
@@ -37,7 +39,19 @@ function createtr(u){
     const tdopcion=document.createElement('td')
     tdopcion.textContent = u.opcion
 
-    tr.append(tdnombre,tdapellido,tdopcion)
+    const tdeditar=document.createElement('td')
+    const buttoneditar = document.createElement('button')
+    buttoneditar.setAttribute("id", "btneditar")
+    buttoneditar.textContent = 'editar'
+    tdeditar.append(buttoneditar)
+
+    const tdeliminar=document.createElement('td')
+    const buttoneliminar = document.createElement('button')
+    buttoneliminar.setAttribute("id", "btneliminar")
+    buttoneliminar.textContent = 'eliminar'
+    tdeditar.append(buttoneliminar)
+
+    tr.append(tdnombre,tdapellido,tdopcion, tdeditar, tdeliminar)
 
     return tr
 }
@@ -56,5 +70,12 @@ btnenviar.onclick = async (e) =>{
 }
 
 
+btneliminar.onclick = async (e) => {
+
+}
+
+btneditar.onclick = async (e) => {
+
+}
 
 
