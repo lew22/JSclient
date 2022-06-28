@@ -1,5 +1,4 @@
 ﻿# JSclient
-
-terminal:
-
-node socket.js
+ 
+ ingresar datos 
+ "click" en enviar
