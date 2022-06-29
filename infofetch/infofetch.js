@@ -1,5 +1,5 @@
 
-const urlServer = 'http://localhost:8001'
+const urlServer = 'http://localhost:8000'
 
 async function infofetch({path,method,body}){
 
