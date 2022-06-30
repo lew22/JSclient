@@ -34,11 +34,11 @@ function createtr(u){
     tdcmd.textContent = u.cmd
 
     const tdnombre= document.createElement('td')
-    tdnombre.textContent = u.nombre
+    tdnombre.textContent = u.sender
 
 
     const tdapellido=document.createElement('td')
-    tdapellido.textContent = u.apellido
+    tdapellido.textContent = u.data
 
 
     const tdopcion=document.createElement('td')
