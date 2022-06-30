@@ -26,6 +26,11 @@
         <hr>
 
         <form action = "" id ="Myform" class="form" name="formulario" method="get">
+            
+            <label>Cmd</label>
+            <input type="text" name="cmd" id="cmd" maxlength="30" placeholder="Cmd"> <br><br>
+
+
             <label>Nombre</label>
             <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre"> <br><br>
 
@@ -53,6 +58,7 @@
         <table>
             <tbody>
                 <tr>
+                    <th>cmd</th>
                     <th>nombre</th>
                     <th>apellido</th>
                     <th>opcion</th>
@@ -72,10 +78,12 @@
 
 
         <!-- /js/main.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.7/uuid.min.js"></script>
         <script src="/model/Info.js"></script>
         <script src="/infofetch/infofetch.js"></script>
         <script src="/controller/info.js"></script>
         <script src="/js/main.js"></script>
+        
     </body>
 
 </html>

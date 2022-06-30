@@ -1,8 +1,9 @@
 
 class Info{
-    constructor(nombre,apellido,opcion){
+    constructor(cmd,nombre,apellido,data){
+        this.cmd = cmd,
         this.nombre = nombre
         this.apellido = apellido
-        this.opcion = opcion
+        this.data = data
     }
 }

@@ -22,7 +22,11 @@ npm install -g # Install globally
 cd concurrentecanaval/tf/JSfrontend
 
 
+live-server --host=127.0.0.1 --port=5500 --entry-file="html/index.html"
+
 live-server --host=127.0.0.1 --port=5502 --entry-file="html/index.html"
 
 live-server --host=127.0.0.2 --port=5501 --entry-file="html/index.html"
+
+
 

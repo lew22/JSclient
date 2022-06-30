@@ -5,6 +5,7 @@ const Myform = document.getElementById("Myform");
 const body = document.querySelector('body')
 const tbody = document.querySelector('tbody')
 const btnenviar = document.querySelector('#btnenviar')
+const cmd = document.querySelector('#cmd')
 const nombre = document.querySelector('#nombre')
 const apellido = document.querySelector('#apellido')
 const opcion = document.querySelector('#opcion')
@@ -28,6 +29,10 @@ body.onload = async () =>{
 
 function createtr(u){
     const tr = document.createElement('tr')
+
+    const tdcmd= document.createElement('td')
+    tdcmd.textContent = u.cmd
+
     const tdnombre= document.createElement('td')
     tdnombre.textContent = u.nombre
 
@@ -51,20 +56,21 @@ function createtr(u){
     buttoneliminar.textContent = 'eliminar'
     tdeditar.append(buttoneliminar)
 
-    tr.append(tdnombre,tdapellido,tdopcion, tdeditar, tdeliminar)
+    tr.append(tdcmd,tdnombre,tdapellido,tdopcion, tdeditar, tdeliminar)
 
     return tr
 }
 
 btnenviar.onclick = async (e) =>{
     e.preventDefault()
+    const icmd=cmd.value
     const inombre=nombre.value
     const iapellido=apellido.value
     const iopcion =opcion.value
-    console.log(inombre,iapellido,iopcion)
+    console.log(icmd,inombre,iapellido,iopcion)
 
 
-    const newInfo = await createInfo(inombre,iapellido,iopcion)
+    const newInfo = await createInfo(icmd,inombre,iapellido,iopcion)
     const tr = createtr(newInfo)
     tbody.append(tr)
 }
